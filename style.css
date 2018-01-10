@@ -1,5 +1,6 @@
 body {
 	background-color: #f5fffa; 
+	margin-bottom: 60px;
 }
 
 h1, h4 {
@@ -25,4 +26,13 @@ hr {
 	border-radius: 10px;
 	padding: 20px;
 	margin-bottom: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 15px;
 }
