@@ -1,8 +1,6 @@
 $(document).ready(function() {
-	var quote;
-	var author;
-
 	function getNewQuote() {
+		// AJAX call to get the JSON data
 		$.ajax({
 			url: 'https://api.forismatic.com/api/1.0/',
 			jsonp: 'jsonp',
@@ -13,25 +11,26 @@ $(document).ready(function() {
 				format: 'jsonp'
 			},
 			success: function(response) {
-				quote = response.quoteText;
-				author = response.quoteAuthor;
-				$('#quote').text(quote);
+				var quote = response.quoteText;
+				var author = response.quoteAuthor;
+				$("#quote").text(quote);
 				if (author) {
-					$('#author').text(' -- ' + author);
+					$("#author").text(' -- ' + author);
 				} else {
-					$('#author').text('-- unknown');
+					$("#author").text('-- unknown');
 				}
 			}
 		});
 	}
 	getNewQuote();
 
-	$('.get-quote').on('click', function(event) {
+	// event handlers
+	$(".get-quote").on('click', function(event) {
 		event.preventDefault();
 		getNewQuote();
 	});
 
-	$('.share-quote').on('click', function(event) {
+	$(".share-quote").on('click', function(event) {
 		event.preventDefault();
 		window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote + ' -- ' + author));
 	});
