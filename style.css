@@ -1,5 +1,6 @@
 body {
-	background-color: #f5fffa; 
+	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/18/2e/16/182e165e3f335cfbe79371ec920e3603.jpg);
+	background-size: cover; 
 	margin-bottom: 60px;
 }
 
@@ -35,4 +36,5 @@ hr {
   height: 40px;
   text-align: center;
   font-size: 15px;
+  background-color: rgba(245, 245, 245, 0.4);
 }
