@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	var quote;
+	var author;
+
 	function getNewQuote() {
 		// AJAX call to get the JSON data
 		$.ajax({
@@ -11,8 +14,8 @@ $(document).ready(function() {
 				format: 'jsonp'
 			},
 			success: function(response) {
-				var quote = response.quoteText;
-				var author = response.quoteAuthor;
+				quote = response.quoteText;
+				author = response.quoteAuthor;
 				$("#quote").text(quote);
 				if (author) {
 					$("#author").text(' -- ' + author);
