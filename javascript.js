@@ -22,7 +22,7 @@ $(document).ready(function() {
 				} else {
 					$("#author").text('-- unknown');
 				}
-			}
+			},
 			error: function(errorMessage) {
 				alert("Error");
 			}
