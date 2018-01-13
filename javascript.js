@@ -23,6 +23,9 @@ $(document).ready(function() {
 					$("#author").text('-- unknown');
 				}
 			}
+			error: function(errorMessage) {
+				alert("Error");
+			}
 		});
 	}
 	getNewQuote();
